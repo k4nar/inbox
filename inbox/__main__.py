@@ -1,9 +1,14 @@
 import click
 
+from inbox.github import login
+
 
 @click.command()
 def inbox():
-    click.echo("Hello World!")
+    gh = login()
+    user = gh.user()
+
+    click.echo("Hello {}!".format(user.name))
 
 
 if __name__ == '__main__':
