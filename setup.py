@@ -4,6 +4,7 @@ import inbox
 
 requirements = [
     "click",
+    "github3.py",
 ]
 
 setup(
